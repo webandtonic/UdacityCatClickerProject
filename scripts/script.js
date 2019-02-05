@@ -1,14 +1,17 @@
 // JavaScript Document
 document.addEventListener("DOMContentLoaded", function () {
 
+	let clicked = 0;
+	let counter = document.querySelector("span");
+
 	function addEvtLst() {
 		let catImage = document.querySelector("img");
 		catImage.addEventListener("click", countClick);
-		console.log(catImage);
 	};
 
 	function countClick() {
-		console.log("clicked!");
+		clicked += 1;
+		counter.innerHTML = (clicked);
 	};
 
 	addEvtLst();
