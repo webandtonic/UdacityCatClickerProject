@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	-mozbox-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+@font-face {
+	font-family: Quicksand;
+	src:url(quicksand-medium-webfont.woff);
+}
+
+@font-face {
+	font-family: Muli;
+	src:url(muli-regular-webfont.woff);
+}
+
+
+body {
+	--lightgreen: #a7d231;
+	--darkgreen: #0c5933;
+	--pink: #b11169;
+	--blue: #027ac7;
+	--brown: #63380e;
+	background-color: #000;
+	color: #fff;
+	font-family: Muli, "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 14px;
+}
+
+h1 {
+	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+
+
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+
+}
+
+a {
+	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+	text-decoration: none;
+	color: var(--lightgreen);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
