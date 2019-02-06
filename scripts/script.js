@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	function createKittyList(kitty) {
 		let kittyLink = document.createElement("a");
 		kittyLink.setAttribute("href", "#");
-		kittyLink.setAttribute("class", "cat-link");
+		kittyLink.setAttribute("class", kitty.name);
 		kittyLink.innerHTML = (kitty.name);
 		kittyList.appendChild(kittyLink);
 		kittyLink.addEventListener("click", displayCat);
@@ -55,7 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 	function displayCat() {
-		console.log(this);
+		let catDisplays = document.getElementsByTagName("article");
+		for (let catDisplay of catDisplays) {
+			catDisplay.style.display = "none";
+		};
+		document.querySelector("article." + this.className).style.display = "flex";
 	};
 
 	function countClick() {
@@ -72,4 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		createKittyList(kitty);
 		createKittyDisplay(kitty);
 	};
+
+	document.querySelector("a").click();
 });
