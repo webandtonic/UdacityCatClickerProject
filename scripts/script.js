@@ -11,11 +11,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		this.url = "images/" + name + ".jpg";
 	};
 
+	function createKittyList() {
+		let kittyList = document.querySelector(".select-cat");
+
+		for (let kitty of kitties) {
+			let kittyLink = document.createElement("a");
+			kittyLink.setAttribute("src", "#");
+			kittyLink.setAttribute("class", "cat-link");
+			kittyLink.innerHTML = (kitty.name);
+			kittyList.appendChild(kittyLink);
+			kittyLink.addEventListener("click", displayCat);
+		};
+
+	};
 
 	for (let cat of cats) {
 		let kitty = new NewCat(cat);
 		kitties.push(kitty);
-	}
+	};
+
+	createKittyList();
 
 	// function addEvtLst() {
 	// 	for (let catImage of catImages) {
