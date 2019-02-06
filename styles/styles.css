@@ -30,7 +30,7 @@ h2, h3, h4, h5, h6 {
 a {
   font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
   text-decoration: none;
-  color: #a7d231; }
+  color: #027ac7; }
 
 img {
   max-width: 100%;
@@ -48,9 +48,19 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  main section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  main aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px; }
+  main article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -63,7 +73,11 @@ main {
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding: 20px; }
+
+a {
+  padding: 10px; }
 
 p {
   padding: 20px; }
