@@ -8,22 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	function NewCat(name, i) {
 		this.name = name;
 		this.url = "images/cat-0" + i + ".jpg";
-		this.clicked = 0;
 	};
 
 	function addEvtLst() {
 		for (let catImage of catImages) {
 			catImage.addEventListener("click", countClick);
+			catImage.clicked = 0;
 		};
 	};
 
-
-
 	function countClick() {
-		clicked += 1;
-		document.querySelector("span." + this.className).innerHTML = (clicked);
+		this.clicked += 1;
+		document.querySelector("span." + this.className).innerHTML = (this.clicked);
 	};
-
 
 	let cat1 = new NewCat("Tiffy", 1);
 	cats.push(cat1);
