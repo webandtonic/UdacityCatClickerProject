@@ -1,81 +1,73 @@
-@charset "UTF-8";
 /* CSS Document */
-
 * {
-	margin: 0;
-	padding: 0;
-	-mozbox-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 @font-face {
-	font-family: Quicksand;
-	src:url(quicksand-medium-webfont.woff);
-}
+  font-family: Quicksand;
+  src: url(quicksand-medium-webfont.woff); }
 
 @font-face {
-	font-family: Muli;
-	src:url(muli-regular-webfont.woff);
-}
-
+  font-family: Muli;
+  src: url(muli-regular-webfont.woff); }
 
 body {
-	--lightgreen: #a7d231;
-	--darkgreen: #0c5933;
-	--pink: #b11169;
-	--blue: #027ac7;
-	--brown: #63380e;
-	background-color: #000;
-	color: #fff;
-	font-family: Muli, "Lucida Sans Unicode", Arial, sans-serif;
-	font-size: 20px;
-}
+  background-color: #000;
+  color: #fff;
+  font-family: Muli, "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 20px; }
 
 h1 {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	color: var(--pink);
-	font-size: 3rem;
-}
+  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+  color: #b11169;
+  font-size: 3rem; }
 
 h2, h3, h4, h5, h6 {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-
-}
+  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif; }
 
 a {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	text-decoration: none;
-	color: var(--lightgreen);
-}
+  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+  text-decoration: none;
+  color: #a7d231; }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
-	margin: 20px;
-}
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20px; }
 
 header {
-	text-align: center;
-	padding: 20px;
-}
+  text-align: center;
+  padding: 20px; }
 
 main {
-	background-color: #fff;
-	color: #000;
-	padding: 20px;
-}
-
-section {
-	text-align: center;
-}
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 p {
-	padding: 20px;
-}
+  padding: 20px; }
 
 span {
-	color: var(--pink);
-	font-weight: bold;
-}
+  color: #b11169;
+  font-weight: bold; }
