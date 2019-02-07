@@ -17,27 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
 				let catObj = new model.NewCat(cat);
 				model.catObjects.push(catObj);
 			};
+		},
+
+		createCatList: function() {
+			for (let cat of model.cats) {
+				viewCatList.createCatLink(cat);
+			};
 		}
 	};
 
 	let viewCatList = {
-		createCatList: function(cat) {
+		catList: document.querySelector(".select-cat"),
+		createCatLink: function(cat) {
 			let catLink = document.createElement("a");
 			catLink.setAttribute("href", "#");
-			catLink.setAttribute("class", cat.name);
-			catLink.innerHTML = (cat.name);
-			catList.appendChild(catLink);
-			catLink.addEventListener("click", displayCat);
+			catLink.setAttribute("class", cat);
+			catLink.innerHTML = (cat);
+			viewCatList.catList.appendChild(catLink);
+			// catLink.addEventListener("click", displayCat);
 		}
 	};
 
 	let viewCatDisplay = {
-		displayCat: function() {
-
-		}
+		// displayCat: function() {
+		//
+		// }
 	};
 
 octopus.createCatObjects();
+octopus.createCatList();
 console.log(model.catObjects);
 
 });
