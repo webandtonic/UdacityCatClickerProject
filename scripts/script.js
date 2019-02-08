@@ -41,8 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			model.currentCatObject = obj;
 		},
 
-		countClick: function(obj) {
-			obj.clicked += 1;
+		countClick: function() {
+			model.currentCatObject.clicked += 1;
+			viewCatDisplay.updateCounter();
 		}
 
 	};
@@ -83,6 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.catName = document.querySelector(".cat-name"),
 			this.catCount = document.querySelector(".cat-count")
 
+			this.catImage.addEventListener("click", octopus.countClick);
+
+			this.render();
 		},
 
 		render: function() {
@@ -91,6 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.catImage.src = (cat.url);
 			this.catImage.alt = (cat.name);
 			this.catName.innerHTML = (cat.name);
+			this.catCount.innerHTML = (cat.clicked);
+		},
+
+		updateCounter: function() {
+			let cat = octopus.getCurrentCatObject();
 			this.catCount.innerHTML = (cat.clicked);
 		}
 	};
