@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			model.currentCatObject.clicked += 1;
 			viewCatDisplay.updateCounter();
 		}
-
 	};
 
 	let viewCatList = {
@@ -73,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 				this.catList.appendChild(catLink);
 			};
 		}
-
 	};
 
 	let viewCatDisplay = {
@@ -103,8 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.catCount.innerHTML = (cat.clicked);
 		}
 	};
-
-
 
 	octopus.init();
 });

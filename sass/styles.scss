@@ -26,79 +26,80 @@ $blue: #027ac7;
 $brown: #63380e;
 
 body {
-
 	background-color: #000;
 	color: #fff;
 	font-family: Muli, "Lucida Sans Unicode", Arial, sans-serif;
 	font-size: 20px;
-}
 
-h1 {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	color: $pink;
-	font-size: 3rem;
-}
+	h1 {
+		font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+		color: $pink;
+		font-size: 3rem;
+	}
 
-h2, h3, h4, h5, h6 {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	color: $blue;
-}
+	h2, h3, h4, h5, h6 {
+		font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+		color: $blue;
+	}
 
-img {
-	max-width: 100%;
-	max-height: 100%;
-	margin: 20px;
-}
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		margin: 20px;
+	}
 
-header {
-	text-align: center;
-	padding: 20px;
-}
-
-main {
-	background-color: #fff;
-	color: #000;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-
-	.select-cat {
-		display: flex;
-		flex-direction: column;
+	header {
+		text-align: center;
 		padding: 20px;
 	}
 
-	.cat-display {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
+	main {
+		background-color: #fff;
+		color: #000;
 		padding: 20px;
+		display: flex;
+		justify-content: center;
+
+		.select-cat {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+
+			button {
+				padding: 10px;
+				border: none;
+				box-shadow: none;
+				background: none;
+				font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+				font-size: 1.5rem;
+				text-align: left;
+				text-decoration: none;
+				color: $blue;
+			}
+		}
+
+		.display-cats {
+			.cat-display {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+
+				p {
+					padding: 20px;
+
+					.cat-name {
+						color: $blue;
+						font-weight: bold;
+					}
+
+					.cat-count {
+						color: $pink;
+						font-weight: bold;
+					}
+				}
+			}
+		}
 	}
-}
-
-button {
-	padding: 10px;
-	border: none;
-	box-shadow: none;
-	background: none;
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	font-size: 1.5rem;
-	text-align: left;
-	text-decoration: none;
-	color: $blue;
-}
-
-p {
-	padding: 20px;
-}
-
-.cat-name {
-	color: $blue;
-	font-weight: bold;
-}
-
-.cat-count {
-	color: $pink;
-	font-weight: bold;
 }

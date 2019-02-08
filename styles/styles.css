@@ -18,79 +18,70 @@ body {
   color: #fff;
   font-family: Muli, "Lucida Sans Unicode", Arial, sans-serif;
   font-size: 20px; }
-
-h1 {
-  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-  color: #b11169;
-  font-size: 3rem; }
-
-h2, h3, h4, h5, h6 {
-  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-  color: #027ac7; }
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 20px; }
-
-header {
-  text-align: center;
-  padding: 20px; }
-
-main {
-  background-color: #fff;
-  color: #000;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  main .select-cat {
+  body h1 {
+    font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+    color: #b11169;
+    font-size: 3rem; }
+  body h2, body h3, body h4, body h5, body h6 {
+    font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+    color: #027ac7; }
+  body img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20px; }
+  body header {
+    text-align: center;
+    padding: 20px; }
+  body main {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 20px; }
-  main .cat-display {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 20px; }
-
-button {
-  padding: 10px;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: none;
-  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-  font-size: 1.5rem;
-  text-align: left;
-  text-decoration: none;
-  color: #027ac7; }
-
-p {
-  padding: 20px; }
-
-.cat-name {
-  color: #027ac7;
-  font-weight: bold; }
-
-.cat-count {
-  color: #b11169;
-  font-weight: bold; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    body main .select-cat {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 20px; }
+      body main .select-cat button {
+        padding: 10px;
+        border: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        background: none;
+        font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+        font-size: 1.5rem;
+        text-align: left;
+        text-decoration: none;
+        color: #027ac7; }
+    body main .display-cats .cat-display {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 20px; }
+      body main .display-cats .cat-display p {
+        padding: 20px; }
+        body main .display-cats .cat-display p .cat-name {
+          color: #027ac7;
+          font-weight: bold; }
+        body main .display-cats .cat-display p .cat-count {
+          color: #b11169;
+          font-weight: bold; }
