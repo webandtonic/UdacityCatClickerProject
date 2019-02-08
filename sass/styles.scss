@@ -41,12 +41,6 @@ h1 {
 
 h2, h3, h4, h5, h6 {
 	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-
-}
-
-a {
-	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-	text-decoration: none;
 	color: $blue;
 }
 
@@ -68,13 +62,13 @@ main {
 	display: flex;
 	justify-content: center;
 
-	aside {
+	.select-cat {
 		display: flex;
 		flex-direction: column;
 		padding: 20px;
 	}
 
-	article {
+	.cat-display {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -83,15 +77,28 @@ main {
 	}
 }
 
-a {
+button {
 	padding: 10px;
+	border: none;
+	box-shadow: none;
+	background: none;
+	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 1.5rem;
+	text-align: left;
+	text-decoration: none;
+	color: $blue;
 }
 
 p {
 	padding: 20px;
 }
 
-span {
+.cat-name {
+	color: $blue;
+	font-weight: bold;
+}
+
+.cat-count {
 	color: $pink;
 	font-weight: bold;
 }

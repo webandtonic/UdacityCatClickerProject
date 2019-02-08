@@ -25,11 +25,7 @@ h1 {
   font-size: 3rem; }
 
 h2, h3, h4, h5, h6 {
-  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif; }
-
-a {
   font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-  text-decoration: none;
   color: #027ac7; }
 
 img {
@@ -51,7 +47,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  main aside {
+  main .select-cat {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -60,7 +56,7 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 20px; }
-  main article {
+  main .cat-display {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -76,12 +72,25 @@ main {
             align-items: center;
     padding: 20px; }
 
-a {
-  padding: 10px; }
+button {
+  padding: 10px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  text-decoration: none;
+  color: #027ac7; }
 
 p {
   padding: 20px; }
 
-span {
+.cat-name {
+  color: #027ac7;
+  font-weight: bold; }
+
+.cat-count {
   color: #b11169;
   font-weight: bold; }
