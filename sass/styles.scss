@@ -4,7 +4,6 @@
 * {
 	margin: 0;
 	padding: 0;
-
 	box-sizing: border-box;
 }
 
@@ -24,6 +23,16 @@ $darkgreen: #0c5933;
 $pink: #b11169;
 $blue: #027ac7;
 $brown: #63380e;
+
+button {
+	cursor: pointer;
+	padding: 10px;
+	font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 1.5rem;
+	border-radius: 25px;
+	background: none;
+	box-shadow: none;
+}
 
 body {
 	background-color: #000;
@@ -60,25 +69,41 @@ body {
 		display: flex;
 		justify-content: center;
 
-		.select-cat {
+		.controll-center {
+			padding: 20px;
 			display: flex;
 			flex-direction: column;
-			padding: 20px;
+			justify-content: flex-start;
+			align-items: flex-start;
 
-			button {
-				padding: 10px;
-				border: none;
-				box-shadow: none;
-				background: none;
-				font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-				font-size: 1.5rem;
-				text-align: left;
-				text-decoration: none;
-				color: $blue;
+			.select-cat {
+				list-style-type: none;
+				padding-top: 50px;
+
+				li {
+					padding: 10px;
+					font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+					font-size: 1.5rem;
+					text-align: left;
+					color: $blue;
+				}
+			}
+
+			.admin {
+				color: $darkgreen;
+				border: 1px solid $darkgreen;
+				margin-top: 50px;
+			}
+
+			.admin:hover {
+				color: #fff;
+				background: $darkgreen;
 			}
 		}
 
 		.display-cats {
+			width: 50%;
+
 			.cat-display {
 				display: flex;
 				flex-direction: column;
@@ -98,6 +123,47 @@ body {
 						color: $pink;
 						font-weight: bold;
 					}
+				}
+			}
+
+			.cat-admin {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+
+				label {
+					width: 30%;
+					padding: 10px;
+				}
+
+				input {
+					width: 65%;
+					padding: 10px;
+					margin: 10px 0;
+					border: 2px solid $brown;
+					border-radius: 10px;
+				}
+
+				input:focus {
+					outline: none;
+					border: 2px solid $lightgreen;
+				}
+
+				button {
+					color: $darkgreen;
+					border: 1px solid $darkgreen;
+					margin: 20px 0 0 20px;
+				}
+
+				button:first-of-type {
+					margin-left: auto;
+				}
+
+				button:hover {
+					color: #fff;
+					background: $darkgreen;
 				}
 			}
 		}

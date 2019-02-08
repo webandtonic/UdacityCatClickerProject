@@ -13,6 +13,16 @@
   font-family: Muli;
   src: url(muli-regular-webfont.woff); }
 
+button {
+  cursor: pointer;
+  padding: 10px;
+  font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
 body {
   background-color: #000;
   color: #fff;
@@ -42,7 +52,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    body main .select-cat {
+    body main .controll-center {
+      padding: 20px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -50,38 +61,86 @@ body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      padding: 20px; }
-      body main .select-cat button {
-        padding: 10px;
-        border: none;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        background: none;
-        font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
-        font-size: 1.5rem;
-        text-align: left;
-        text-decoration: none;
-        color: #027ac7; }
-    body main .display-cats .cat-display {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding: 20px; }
-      body main .display-cats .cat-display p {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      body main .controll-center .select-cat {
+        list-style-type: none;
+        padding-top: 50px; }
+        body main .controll-center .select-cat li {
+          padding: 10px;
+          font-family: Quicksand, "Lucida Sans Unicode", Arial, sans-serif;
+          font-size: 1.5rem;
+          text-align: left;
+          color: #027ac7; }
+      body main .controll-center .admin {
+        color: #0c5933;
+        border: 1px solid #0c5933;
+        margin-top: 50px; }
+      body main .controll-center .admin:hover {
+        color: #fff;
+        background: #0c5933; }
+    body main .display-cats {
+      width: 50%; }
+      body main .display-cats .cat-display {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 20px; }
-        body main .display-cats .cat-display p .cat-name {
-          color: #027ac7;
-          font-weight: bold; }
-        body main .display-cats .cat-display p .cat-count {
-          color: #b11169;
-          font-weight: bold; }
+        body main .display-cats .cat-display p {
+          padding: 20px; }
+          body main .display-cats .cat-display p .cat-name {
+            color: #027ac7;
+            font-weight: bold; }
+          body main .display-cats .cat-display p .cat-count {
+            color: #b11169;
+            font-weight: bold; }
+      body main .display-cats .cat-admin {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px; }
+        body main .display-cats .cat-admin label {
+          width: 30%;
+          padding: 10px; }
+        body main .display-cats .cat-admin input {
+          width: 65%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 2px solid #63380e;
+          border-radius: 10px; }
+        body main .display-cats .cat-admin input:focus {
+          outline: none;
+          border: 2px solid #a7d231; }
+        body main .display-cats .cat-admin button {
+          color: #0c5933;
+          border: 1px solid #0c5933;
+          margin: 20px 0 0 20px; }
+        body main .display-cats .cat-admin button:first-of-type {
+          margin-left: auto; }
+        body main .display-cats .cat-admin button:hover {
+          color: #fff;
+          background: #0c5933; }

@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			let cats = octopus.getCatObjects();
 
 			for (let cat of cats) {
-				let catLink = document.createElement("button");
+				let catLink = document.createElement("li");
 				catLink.innerHTML = (cat.name);
 
 				catLink.addEventListener("click", (function(obj) {
