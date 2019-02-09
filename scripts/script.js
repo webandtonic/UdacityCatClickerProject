@@ -48,7 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 
 		updateCatObjectValues: function() {
-
+			let cat = model.currentCatObject;
+			cat.name = viewCatAdmin.inputCatName.value;
+			cat.url = viewCatAdmin.inputCatImage.value;
+			cat.clicked = parseInt(viewCatAdmin.inputCatClicked.value);
+			viewCatAdmin.hideShow();
+			viewCatList.render();
+			viewCatDisplay.render();
 		}
 	};
 
@@ -63,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		render: function() {
 			let cats = octopus.getCatObjects();
+			this.catList.innerHTML = ("");
 
 			for (let cat of cats) {
 				let catLink = document.createElement("li");
@@ -121,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.buttonCancel = document.querySelector(".edit-cancel");
 			this.buttonCancel.addEventListener("click", this.hideShow);
 			this.buttonSave = document.querySelector(".edit-save");
+			this.buttonSave.addEventListener("click", octopus.updateCatObjectValues);
 
 			this.render();
 			this.hideShow();
-			console.log(this.catAdmin);
 		},
 
 		render: function() {
