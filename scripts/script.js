@@ -45,6 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		countClick: function() {
 			model.currentCatObject.clicked += 1;
 			viewCatDisplay.updateCounter();
+		},
+
+		updateCatObjectValues: function() {
+
 		}
 	};
 
@@ -68,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					return function() {
 						octopus.setCurrentCatObject(obj);
 						viewCatDisplay.render();
+						viewCatAdmin.render();
 					};
 				})(cat));
 
@@ -113,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.inputCatName = document.querySelector(".edit-cat-name");
 			this.inputCatImage = document.querySelector(".edit-cat-image");
 			this.inputCatClicked = document.querySelector(".edit-cat-clicked");
+			this.buttonCancel = document.querySelector(".edit-cancel");
+			this.buttonCancel.addEventListener("click", this.hideShow);
+			this.buttonSave = document.querySelector(".edit-save");
 
 			this.render();
 			this.hideShow();
@@ -129,6 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		hideShow: function() {
 			viewCatAdmin.catAdmin.classList.toggle("hide");
+			if (!viewCatAdmin.catAdmin.classList.contains("hide")) {
+				viewCatAdmin.render();
+			};
 		}
 	};
 
