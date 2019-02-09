@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			viewCatList.init();
 			viewCatDisplay.init();
+			viewCatAdmin.init();
 		},
 
 		getCatObjects: function() {
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		init: function() {
 		 this.catList = document.querySelector(".select-cat");
+		 this.adminButton = document.querySelector(".admin");
 
 		 this.render();
 		},
@@ -71,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				this.catList.appendChild(catLink);
 			};
+
+			this.adminButton.addEventListener("click", viewCatAdmin.hideShow);
 		}
 	};
 
@@ -99,6 +103,32 @@ document.addEventListener("DOMContentLoaded", function () {
 		updateCounter: function() {
 			let cat = octopus.getCurrentCatObject();
 			this.catCount.innerHTML = (cat.clicked);
+		}
+	};
+
+	let viewCatAdmin = {
+
+		init: function() {
+			this.catAdmin = document.querySelector(".cat-admin");
+			this.inputCatName = document.querySelector(".edit-cat-name");
+			this.inputCatImage = document.querySelector(".edit-cat-image");
+			this.inputCatClicked = document.querySelector(".edit-cat-clicked");
+
+			this.render();
+			this.hideShow();
+			console.log(this.catAdmin);
+		},
+
+		render: function() {
+			let cat = octopus.getCurrentCatObject();
+			this.inputCatName.value = (cat.name);
+			this.inputCatImage.value = (cat.url);
+			this.inputCatClicked.value = (cat.clicked);
+
+		},
+
+		hideShow: function() {
+			viewCatAdmin.catAdmin.classList.toggle("hide");
 		}
 	};
 

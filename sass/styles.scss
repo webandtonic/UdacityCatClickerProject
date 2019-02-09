@@ -34,6 +34,10 @@ button {
 	box-shadow: none;
 }
 
+button:focus {
+	outline: none;
+}
+
 body {
 	background-color: #000;
 	color: #fff;
@@ -86,6 +90,7 @@ body {
 					font-size: 1.5rem;
 					text-align: left;
 					color: $blue;
+					cursor: pointer;
 				}
 			}
 
@@ -165,6 +170,10 @@ body {
 					color: #fff;
 					background: $darkgreen;
 				}
+			}
+
+			.hide {
+				display: none;
 			}
 		}
 	}
